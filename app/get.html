@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get Bloc · Install the demo on your phone</title>
+<meta name="description" content="Install the Bloc demo on Android or iPhone. Same-day eggs, bread and milk for res. No real orders or payments.">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bloc">
+<meta property="og:url" content="https://getbloc.vercel.app/get">
+<meta property="og:title" content="Get Bloc on your phone">
+<meta property="og:description" content="Same-day eggs, bread and milk for res. Install the demo on Android or iPhone.">
+<meta property="og:image" content="https://getbloc.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try { const t = localStorage.getItem('bloc-theme'); if (t && t !== 'system') document.documentElement.dataset.theme = t; } catch {}</script>
+<style>
+:root{--blue:#22A6F2;--blue-600:#0B78C2;--blue-700:#09649F;--yellow:#F6C915;--blue-100:#D3ECFC;
+  --bg:#FFFFFF;--surface:#F3F4F6;--line:#ECEEF1;--ink:#0E1116;--ink-2:#3C434D;--muted:#5F6672;--link:#0A6DB0;
+  --shadow-1:0 1px 2px rgba(14,17,22,.05),0 2px 10px rgba(14,17,22,.06);
+  --ease-out:cubic-bezier(.22,1,.36,1);--ease-spring:cubic-bezier(.34,1.45,.64,1);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1116;--surface:#1A1E25;--line:#222730;--ink:#F2F4F7;--ink-2:#C8CDD5;--muted:#9AA2AE;--link:#5CBBF7;--shadow-1:0 1px 2px rgba(0,0,0,.3);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1116;--surface:#1A1E25;--line:#222730;--ink:#F2F4F7;--ink-2:#C8CDD5;--muted:#9AA2AE;--link:#5CBBF7;--shadow-1:0 1px 2px rgba(0,0,0,.3);color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 "Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+main{max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 40px) 20px calc(env(safe-area-inset-bottom) + 40px)}
+
+.tile{width:72px;height:72px;border-radius:18px;background:var(--blue);display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(34,166,242,.6)}
+.wm{display:block;width:52px}
+.wm g{stroke-width:11}.wm .wa{stroke:var(--yellow)}.wm .wo,.wm .wc{stroke:#fff}
+.wm .warc{stroke:var(--yellow);stroke-dasharray:56 44;transform-box:fill-box;transform-origin:center;transform:rotate(130deg)}
+
+h1{margin:32px 0 0;font-size:34px;line-height:1.1;font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+.lead{margin:12px 0 0;font-size:17px;line-height:1.5;color:var(--muted);max-width:34em}
+
+.seg{display:flex;gap:4px;margin-top:32px;padding:4px;border-radius:12px;background:var(--surface)}
+.seg button{flex:1;height:40px;border-radius:9px;font-size:15px;font-weight:600;color:var(--muted);transition:background-color .2s,color .2s,box-shadow .2s}
+.seg button[aria-selected="true"]{background:var(--bg);color:var(--ink);box-shadow:var(--shadow-1)}
+
+.pane{margin-top:24px}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:56px;padding:0 20px;border-radius:12px;background:var(--blue-600);color:#fff;font-size:17px;font-weight:600;transition:transform .35s var(--ease-spring),background-color .2s}
+.cta:active{transform:scale(.98);background:var(--blue-700);transition-duration:.08s}
+.cta small{font-size:15px;font-weight:500;opacity:.8}
+
+.steps{list-style:none;margin:32px 0 0;padding:0;counter-reset:s}
+.steps li{display:flex;align-items:center;gap:16px;counter-increment:s}
+.steps li::before{content:counter(s);flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--surface);font-size:15px;font-weight:700}
+.steps .t{flex:1;min-height:76px;padding:16px 0;display:flex;flex-direction:column;justify-content:center}
+.steps li+li .t{border-top:1px solid var(--line)}
+.steps b,.row b{display:block;font-size:17px;line-height:1.3;font-weight:600}
+.steps span,.row span{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:var(--muted)}
+
+.row{display:flex;align-items:center;gap:16px;margin-top:24px;padding:16px;border-radius:16px;background:var(--surface);min-height:76px}
+.row .ic{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--bg);color:var(--ink)}
+.row .ic svg,.row .chev{width:20px;height:20px}
+.row .t{flex:1}
+.row .chev{flex:none;color:var(--muted)}
+
+.desk{display:none;align-items:center;gap:20px;margin-top:40px;padding:16px;border-radius:16px;background:var(--surface)}
+.is-desk .desk{display:flex}
+.desk img{width:112px;height:112px;border-radius:8px;flex:none;background:#fff}
+.desk b{display:block;font-size:17px;font-weight:600}
+.desk span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}
+
+footer{margin-top:40px;font-size:15px;color:var(--muted)}
+footer a{font-weight:600;color:var(--link)}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <a class="tile" href="/" aria-label="Open Bloc"><svg class="wm" viewBox="6 6 212 68" aria-hidden="true"><g fill="none"><path class="wa" pathLength="100" stroke-linecap="square" d="M18 62.5V17.5H34A11.25 11.25 0 0 1 34 40H18M18 40H36A11.25 11.25 0 0 1 36 62.5H18"/><path class="wa" pathLength="100" stroke-linecap="square" d="M66.5 17.5V62.5H86"/><circle class="wo" pathLength="100" cx="127.5" cy="40" r="22.5"/><circle class="warc" pathLength="100" cx="127.5" cy="40" r="22.5"/><path class="wc" pathLength="100" d="M207.4 24.1A22.5 22.5 0 1 0 207.4 55.9"/></g></svg></a>
+
+  <h1>Get Bloc on your phone</h1>
+  <p class="lead">Same-day eggs, bread and milk for res. This is a demo, so there are no real orders or payments.</p>
+
+  <div class="seg" role="tablist" aria-label="Your phone">
+    <button role="tab" id="t-android" data-os="android" aria-controls="p-android" aria-selected="true">Android</button>
+    <button role="tab" id="t-ios" data-os="ios" aria-controls="p-ios" aria-selected="false">iPhone</button>
+  </div>
+
+  <section class="pane" id="p-android" role="tabpanel" aria-labelledby="t-android" data-for="android">
+    <a class="cta" href="/download/BlocDEMO.apk" download>Download for Android <small>· 0.7 MB</small></a>
+    <ol class="steps">
+      <li><div class="t"><b>Open the download</b><span>Tap BlocDEMO.apk in your notifications or Downloads.</span></div></li>
+      <li><div class="t"><b>Allow this install</b><span>If Android asks, let your browser install apps, then go back.</span></div></li>
+      <li><div class="t"><b>Tap Install, then Open</b><span>Play Protect doesn't know Bloc yet. Choose Install anyway.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="pane" id="p-ios" role="tabpanel" aria-labelledby="t-ios" data-for="ios" hidden>
+    <a class="cta" href="/">Open Bloc</a>
+    <ol class="steps">
+      <li><div class="t"><b>Open Bloc in Safari</b><span>Inside WhatsApp or Instagram? Open this link in Safari first.</span></div></li>
+      <li><div class="t"><b>Tap Share</b><span>The square with an arrow at the bottom of the screen.</span></div></li>
+      <li><div class="t"><b>Tap Add to Home Screen</b><span>Then Add. Bloc opens full screen, like any app.</span></div></li>
+    </ol>
+    <a class="row" href="/download/Bloc.mobileconfig">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.5h10A2.5 2.5 0 0 1 19.5 5v14a2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 19V5A2.5 2.5 0 0 1 7 2.5zm3 15.5v1.5h4V18z"/></svg></span>
+      <span class="t"><b>Or install the Bloc profile</b><span>Settings will call it unverified. It only adds the Bloc icon.</span></span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg>
+    </a>
+  </section>
+
+  <div class="desk">
+    <img src="/icons/qr-get.svg" alt="QR code for getbloc.vercel.app/get">
+    <div><b>Scan with your phone's camera</b><span>It opens this page on your phone, ready to install.</span></div>
+  </div>
+
+  <footer>Prefer the browser? <a href="/">Open Bloc here</a></footer>
+</main>
+<script>
+const ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1), android = /Android/i.test(ua);
+const tabs = [...document.querySelectorAll('[data-os]')];
+const pick = os => {
+  tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.os === os));
+  document.querySelectorAll('[data-for]').forEach(p => { p.hidden = p.dataset.for !== os; });
+};
+tabs.forEach(b => b.addEventListener('click', () => pick(b.dataset.os)));
+tabs.forEach((b, i) => b.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const n = tabs[(i + 1) % tabs.length]; n.focus(); pick(n.dataset.os); } }));
+document.documentElement.classList.toggle('is-desk', !ios && !android);
+pick(ios ? 'ios' : 'android');
+</script>
+</body>
+</html>

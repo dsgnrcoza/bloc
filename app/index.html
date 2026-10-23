@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bloc · Eggs, bread and milk, same day</title>
+<meta name="description" content="Bloc delivers eggs, bread and milk to your res the same day. Bloc+ takes 15% off everything and drops delivery to R7.">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Bloc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bloc">
+<meta property="og:url" content="https://getbloc.vercel.app/">
+<meta property="og:title" content="Bloc · Eggs, bread and milk, same day">
+<meta property="og:description" content="House essentials delivered to your res today. Bloc+ takes 15% off everything and drops delivery to R7.">
+<meta property="og:image" content="https://getbloc.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Bloc wordmark beside eggs, bread and milk">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<div class="stage">
+  <aside class="pitch" aria-label="About this demo">
+    <div class="ptile"><i data-wm=""></i></div>
+    <h1>Bloc</h1>
+    <p>Eggs, bread and milk delivered to res the same day. Bloc+ takes 15% off everything and drops delivery to R7.</p>
+    <ol class="hints">
+      <li>Create an account</li>
+      <li>Pick a pack from the sheet</li>
+      <li>Check out, then flip on Bloc+</li>
+    </ol>
+    <div class="qr"><div id="qr" aria-hidden="true"></div><span><b>Try it on your phone</b>Scan to install Bloc on Android or iPhone.</span></div>
+    <small>Interactive demo. No real payments are taken.</small>
+  </aside>
+
+  <div class="dwrap"><div class="device"><div class="island"></div>
+  <div class="app" id="app">
+
+    <div class="sbar" id="sbar" aria-hidden="true"><span id="sbt">9:41</span><span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" width="3" height="12" rx="1"/></svg>
+      <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.4 0 4.6.9 6.3 2.5l1.2-1.3A10.8 10.8 0 0 0 8 .4C5.2.4 2.5 1.5.5 3.4l1.2 1.3A9 9 0 0 1 8 2.2zm0 3.6c1.4 0 2.7.5 3.7 1.4l1.2-1.3A7.3 7.3 0 0 0 8 4a7.3 7.3 0 0 0-4.9 1.9l1.2 1.3c1-.9 2.3-1.4 3.7-1.4zm0 3.5c.5 0 1 .2 1.4.5L8 11.6 6.6 9.8c.4-.3.9-.5 1.4-.5z"/></svg>
+      <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2" fill="currentColor"/><path d="M25 4.5v4c.8-.3 1.4-1.1 1.4-2s-.6-1.7-1.4-2z" fill="currentColor" opacity=".45"/></svg>
+    </span></div>
+
+    <!-- WELCOME -->
+    <section class="screen" id="s-welcome" aria-label="Welcome">
+      <div class="whero" id="whero"></div>
+      <div class="wbody">
+        <h1>House essentials, at your door today.</h1>
+        <p>Eggs, bread and milk for res life. Same-day delivery, and Bloc+ makes every order cheaper.</p>
+        <button class="cta" data-act="signup">Get started</button>
+        <button class="btn2 tap" data-act="google" id="wGoogle" hidden><i data-i="google"></i>Continue with Google</button>
+        <button class="tlink" data-act="login">I already have an account</button>
+      </div>
+    </section>
+
+    <!-- SIGN UP: one question per step -->
+    <section class="screen form" id="s-signup" aria-label="Create your account">
+      <header class="fhead"><button class="ib tap" data-back aria-label="Back"><i data-i="back"></i></button><div class="steps" id="suSteps" aria-hidden="true"></div><span style="width:44px"></span></header>
+      <form class="fbody" id="suForm" novalidate>
+        <div class="track" id="suTrack">
+          <fieldset class="step" data-step="name">
+            <h1>What’s your name?</h1>
+            <p class="lede">So your courier knows who to look for.</p>
+            <div class="row2">
+              <label class="field"><span>First name</span><input name="first" autocomplete="given-name" autocapitalize="words" enterkeyhint="next"></label>
+              <label class="field"><span>Last name</span><input name="last" autocomplete="family-name" autocapitalize="words" enterkeyhint="next"></label>
+            </div>
+          </fieldset>
+          <fieldset class="step" data-step="email">
+            <h1>What’s your email?</h1>
+            <p class="lede">Receipts and delivery updates go here.</p>
+            <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" enterkeyhint="next"></label>
+          </fieldset>
+          <fieldset class="step" data-step="password">
+            <h1>Create a password</h1>
+            <p class="lede">Use at least 8 characters.</p>
+            <label class="field pw"><span>Password</span><input name="password" type="password" autocomplete="new-password" enterkeyhint="next"><button type="button" class="eye" data-act="eye" aria-label="Show password"><i data-i="eye"></i></button></label>
+          </fieldset>
+          <fieldset class="step" data-step="place">
+            <h1>Where should we deliver?</h1>
+            <p class="lede">Your res and room number. You can add more places later.</p>
+            <label class="field"><span>Residence</span><input name="res" autocomplete="address-line1" autocapitalize="words" placeholder="Name of your res" enterkeyhint="next"></label>
+            <label class="field"><span>Room or unit</span><input name="room" autocomplete="address-line2" placeholder="e.g. 214" enterkeyhint="done"></label>
+          </fieldset>
+        </div>
+        <p class="ferr" id="suErr" role="alert"></p>
+      </form>
+      <footer class="ffoot"><button class="cta" type="submit" form="suForm" id="suNext"><span>Next</span></button><p class="fine" id="suFine">By creating an account you agree to Bloc’s terms. Demo only: no real payments.</p></footer>
+    </section>
+
+    <!-- LOG IN -->
+    <section class="screen form" id="s-login" aria-label="Log in">
+      <header class="fhead"><button class="ib tap" data-back aria-label="Back"><i data-i="back"></i></button></header>
+      <form class="fbody" id="liForm" novalidate>
+        <div class="fpad">
+          <h1 class="ftitle">Welcome back</h1>
+          <p class="lede">Log in with the email you signed up with.</p>
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" enterkeyhint="next"></label>
+          <label class="field pw"><span>Password</span><input name="password" type="password" autocomplete="current-password" enterkeyhint="go"><button type="button" class="eye" data-act="eye" aria-label="Show password"><i data-i="eye"></i></button></label>
+          <button type="button" class="forgot" data-act="forgot">Forgot password?</button>
+          <div id="liGoogle" hidden><div class="or">or</div><button type="button" class="btn2 tap" data-act="google"><i data-i="google"></i>Continue with Google</button></div>
+        </div>
+        <p class="ferr" id="liErr" role="alert"></p>
+      </form>
+      <footer class="ffoot"><button class="cta" type="submit" form="liForm" id="liBtn"><span>Log in</span></button></footer>
+    </section>
+
+    <!-- ONBOARDING -->
+    <section class="screen fade" id="s-onboard" aria-label="How Bloc works">
+      <button class="tlink skip" data-act="obDone">Skip</button>
+      <div class="ob" id="ob"></div>
+      <div class="dots" id="obDots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      <footer class="ffoot"><button class="cta" data-act="obNext" id="obBtn">Next</button></footer>
+    </section>
+
+    <!-- HOME -->
+    <section class="screen tab" id="s-home" aria-label="Home">
+      <div class="scroll" id="homeScroll">
+        <header class="htop"><i data-wm="ink"></i><button class="pchip tap" id="pchip" data-act="plus"></button></header>
+        <h1 class="greet" id="greet">Hello</h1>
+        <div class="search">
+          <i data-i="search"></i>
+          <input id="q" type="search" placeholder="What do you need?" autocomplete="off" enterkeyhint="search" aria-label="Search essentials">
+          <button class="when tap" data-act="when" id="whenBtn" aria-label="Delivery time"></button>
+        </div>
+        <div class="results" id="results" hidden></div>
+        <div class="places" id="places"></div>
+        <div class="band"></div>
+        <div class="sech"><h2>Essentials</h2><button data-tab="shop">See all</button></div>
+        <div class="ess" id="ess"></div>
+        <div id="plusCard"></div>
+        <div class="sech"><h2>Ways to save</h2></div>
+        <div class="hs" id="deals"></div>
+        <div id="goAgainWrap"><div class="sech"><h2>Go again</h2></div><div id="goAgain"></div></div>
+        <div class="spacer"></div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="screen tab" id="s-shop" aria-label="Shop">
+      <div class="scroll">
+        <h1 class="big-title">Shop</h1>
+        <div class="sech"><h2>Essentials</h2></div>
+        <div id="shopBody"></div>
+        <div class="spacer"></div>
+      </div>
+    </section>
+
+    <!-- ACTIVITY -->
+    <section class="screen tab" id="s-orders" aria-label="Activity">
+      <div class="scroll">
+        <h1 class="big-title">Activity</h1>
+        <div class="sech"><h2>Upcoming</h2></div>
+        <div id="ordUp" style="padding:0 20px"></div>
+        <div class="sech"><h2>Past</h2></div>
+        <div id="ordPast"></div>
+        <div class="spacer"></div>
+      </div>
+    </section>
+
+    <!-- ACCOUNT -->
+    <section class="screen tab" id="s-account" aria-label="Account">
+      <div class="scroll" id="accBody"></div>
+    </section>
+
+    <!-- CHOOSE: map + sheet -->
+    <section class="screen mapscr" id="s-select" aria-label="Choose a pack">
+      <div class="map" id="mapSel"></div>
+      <button class="fab tap" data-back aria-label="Back"><i data-i="back"></i></button>
+      <button class="fab r tap" data-act="cart" id="cartFab" aria-label="Cart"><i data-i="bag"></i></button>
+      <button class="fab loc tap" data-act="recenter" aria-label="Recenter map"><i data-i="locate"></i></button>
+      <div class="sheet" id="sheetSel" role="region" aria-labelledby="selTitle">
+        <div class="grab"><i></i><h3 id="selTitle">Choose eggs</h3></div>
+        <div class="chips" id="catChips" role="tablist" aria-label="Categories"></div>
+        <div class="list" id="selList"></div>
+      </div>
+      <div class="foot" id="selFoot">
+        <button class="payrow tap" data-act="pay" aria-label="Change payment method"></button>
+        <button class="cta" id="selCta" data-act="choose">Add</button>
+      </div>
+    </section>
+
+    <!-- CHECKOUT (modal) -->
+    <section class="screen modal" id="s-checkout" aria-label="Your order">
+      <i class="mgrip"></i>
+      <div class="mhead"><button class="ib tap" data-back aria-label="Close"><i data-i="down"></i></button><h3>Your order</h3><span></span></div>
+      <div class="scroll" id="coBody"></div>
+      <div class="foot">
+        <button class="payrow tap" data-act="pay" aria-label="Change payment method"></button>
+        <button class="cta" id="coCta" data-act="place">Place order</button>
+      </div>
+    </section>
+
+    <!-- TRACKING -->
+    <section class="screen mapscr" id="s-track" aria-label="Delivery tracking">
+      <div class="map" id="mapTrk"></div>
+      <button class="fab tap" data-back aria-label="Back"><i data-i="back"></i></button>
+      <button class="fab loc tap" data-act="recenter" aria-label="Recenter map"><i data-i="locate"></i></button>
+      <div class="sheet" id="sheetTrk"><div class="grab"><i></i></div><div class="trk" id="trkBody" aria-live="polite"></div></div>
+    </section>
+
+    <!-- BLOC+ -->
+    <section class="screen" id="s-plus" aria-label="Bloc+ membership">
+      <button class="fab tap" data-back aria-label="Back"><i data-i="back"></i></button>
+      <div class="scroll">
+        <div class="phero">
+          <svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="rg0" cx="50" cy="50" r="38"/><circle class="rg1" cx="50" cy="50" r="38" pathLength="100"/></svg>
+          <div class="plogo"><i data-wm=""></i><span class="pplus">+</span></div>
+          <h2>Pay less on every order.</h2>
+          <p>The membership built for res life.</p>
+          <div class="price"><b id="plusFee">R27</b><span>a month, cancel anytime</span></div>
+        </div>
+        <div class="ben" id="plusBen"></div>
+        <div class="calc">
+          <span>How much would I save?</span>
+          <div class="cv"><b id="calcOut">R0</b><span>a month</span></div>
+          <input type="range" id="calcN" min="1" max="12" value="4" aria-label="Orders per month">
+          <div class="cl" id="calcLab">4 orders a month</div>
+          <small id="calcNote"></small>
+        </div>
+        <button class="tlink u" id="plusLeave" data-act="leave" hidden>Cancel membership</button>
+        <div style="height:150px"></div>
+      </div>
+      <div class="foot"><button class="cta y" id="plusCta" data-act="join">Join Bloc+</button></div>
+    </section>
+
+    <nav class="tabbar hide" id="tabbar" aria-label="Main">
+      <button data-tab="home"><i data-i="tHome"></i><span>Home</span></button>
+      <button data-tab="shop"><i data-i="tShop"></i><span>Shop</span></button>
+      <button data-tab="orders"><i data-i="tAct"></i><span>Activity</span><i class="dot" id="actDot" hidden></i></button>
+      <button data-tab="account"><i data-i="tUser"></i><span>Account</span></button>
+    </nav>
+    <div class="dock" id="dock"></div>
+
+    <div class="scrim" id="scrim" data-act="scrim"></div>
+    <div class="pscrim" id="pscrim" data-act="pkclose"></div>
+    <div class="picker" id="picker" role="dialog" aria-modal="true" aria-labelledby="pkTitle"><i class="gr"></i><div class="pkh" id="pkHead"></div><div class="pkb" id="pkBody"></div></div>
+
+    <div class="note" id="note" role="status" aria-live="polite"></div>
+    <div class="proc" id="proc"><div class="spin"><i data-wm=""></i></div><p id="procMsg">Placing your order</p></div>
+    <div class="splash" id="splash"><i data-wm=""></i><p class="tl">House essentials. Same day.</p></div>
+    <div class="hbar"></div>
+  </div>
+  </div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Never publish: reference photos, Vercel link, env files, signing keys, local SDK paths
+README/
+.vercel/
+.env*
+*.jks
+*.keystore
+keystore.properties
+local.properties
+
+# Build output and installs
+node_modules/
+android/.gradle/
+android/build/
+android/app/build/
+release/
+app/download/BlocDEMO.apk
+
+# Generated media ships on the GitHub release instead
+marketing/
+
+# Local tooling and the old single-file prototype
+.claude/
+Bloc.html
