@@ -16,6 +16,8 @@ const I = {
   chev: ic('m9.5 6 6 6-6 6'),
   down: ic('m6 9.5 6 6 6-6'),
   back: ic('M19 12H5.5M11 6l-6 6 6 6'),
+  close: ic('M6.5 6.5l11 11M17.5 6.5l-11 11'),
+  expand: ic('M14 4.5h5.5V10M10 19.5H4.5V14M19.5 4.5l-6 6M4.5 19.5l6-6'),
   plus: ic('M12 5.5v13M5.5 12h13'),
   minus: ic('M5.5 12h13'),
   trash: ic('M5 7h14M9.5 7V5h5v2M7 7l1 12.5h8L17 7'),

@@ -10,10 +10,10 @@ mkdirSync(out, { recursive: true });
 
 const SLIDES = [
   ['01-welcome', 'Eggs, bread and milk, same day.', 'Delivered to your res.'],
-  ['08-home', 'Send it to your room or the library.', 'Your places are saved.'],
-  ['10-choose-eggs', 'See the price and when it lands.', 'Every option shows its arrival time.'],
+  ['08-home', 'Tap + and it’s in your basket.', 'Eggs, bread and milk on one screen.'],
+  ['10-choose-eggs', 'Pick your size.', 'See the price and when it lands.'],
   ['13-checkout-bloc-plus', 'Bloc+ takes 15% off everything.', 'And delivery drops to R7.'],
-  ['16-tracking', 'Track it live to your door.', 'Courier, map and a delivery PIN.'],
+  ['16-tracking', 'Track it live to your door.', 'A countdown ring, the map and a PIN.'],
   ['17-live-activity', 'Follow it from the home screen.', 'A live card updates as it moves.'],
   ['19-delivered', 'Delivered. Rate it in a tap.', 'Then order the same again.'],
   ['dark-08-home', 'Easy on the eyes at night.', 'Follows your phone’s dark mode.'],
