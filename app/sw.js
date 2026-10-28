@@ -1,5 +1,5 @@
 // Network first, cache as a fallback: always fresh when online, still opens offline.
-const CACHE = 'bloc-v2';
+const CACHE = 'bloc-v3';
 const SHELL = ['/', '/styles.css', '/app.js', '/art.js', '/auth.js', '/firebase-config.js', '/manifest.webmanifest', '/icons/icon-192.png'];
 
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });

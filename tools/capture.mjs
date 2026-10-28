@@ -56,15 +56,14 @@ async function walk(scheme) {
   await click('#obBtn'); await shot(d + '06-onboarding-bloc-plus', 900);
   await click('#obBtn'); await shot(d + '07-onboarding-delivery', 900);
   await click('#obBtn');
-  await shot(d + '08-home', 1100);
-  await click('#tabbar [data-tab="shop"]'); await shot(d + '09-shop', 600);
-  await click('#tabbar [data-tab="home"]'); await sleep(400);
+  await shot(d + '08-home', 1400);
+  await run(() => document.getElementById('homeScroll').scrollTo(0, 560)); await shot(d + '09-shop', 600);
+  await run(() => document.getElementById('homeScroll').scrollTo(0, 0)); await sleep(400);
 
-  await click('#ess [data-cat="eggs"]'); await shot(d + '10-choose-eggs', 1800);
-  await click('#selCta'); await sleep(400);
-  await click('#catChips [data-cat="bread"]'); await sleep(700);
-  await click('#selCta'); await shot(d + '11-cart-added', 700);
-  await click('#selCta'); await shot(d + '12-checkout', 1000);
+  await click('#blocs [data-cat="eggs"]'); await shot(d + '10-choose-eggs', 1000);
+  await click('#psCta'); await sleep(900);
+  await click('#blocs [data-quick="breadW"]'); await shot(d + '11-cart-added', 1100);
+  await click('#ictx'); await shot(d + '12-checkout', 1000);
   await click('[data-act="joinToggle"]'); await sleep(300);
   await run(() => { const s = document.getElementById('coBody'); s.scrollTop = s.scrollHeight; });
   await shot(d + '13-checkout-bloc-plus', 600);
@@ -72,16 +71,16 @@ async function walk(scheme) {
   await click('#pscrim'); await sleep(500);
   await click('#coCta'); await shot(d + '15-placing-order', 600);
   await sleep(9000); await shot(d + '16-tracking', 0);
-  await click('#s-track .fab[data-back]'); await shot(d + '17-live-activity', 1300);
-  await click('#tabbar [data-tab="orders"]'); await shot(d + '18-activity', 700);
+  await click('#s-track .nhead [data-back]'); await shot(d + '17-live-activity', 1300);
+  await click('#island [data-tab="orders"]'); await shot(d + '18-activity', 700);
   await click('#ordUp [data-act="track"]'); await sleep(800);
   await page.waitForFunction(() => document.getElementById('trkBody').innerText.includes('Delivered'), { timeout: 40000 });
   await click('[data-star="5"]'); await shot(d + '19-delivered', 900);
   await click('[data-act="done"]'); await sleep(700);
-  await run(() => document.getElementById('homeScroll').scrollTo(0, 520)); await shot(d + '20-home-go-again', 600);
+  await run(() => document.getElementById('homeScroll').scrollTo(0, 700)); await shot(d + '20-home-go-again', 600);
   await run(() => document.getElementById('homeScroll').scrollTo(0, 0));
-  await click('#tabbar [data-tab="account"]'); await shot(d + '21-account', 700);
-  await click('#accBody [data-act="plus"]'); await shot(d + '22-bloc-plus', 900);
+  await click('#island [data-tab="account"]'); await shot(d + '21-account', 700);
+  await click('#accBody [data-act="plus"]'); await shot(d + '22-bloc-plus', 1400);
 }
 
 await walk('light');
